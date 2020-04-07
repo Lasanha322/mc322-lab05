@@ -2,10 +2,10 @@ package lab05;
 
 public class Buraco {
 	int x;
-	String y;
+	Char y;
 	int espaco; // se 0 espaço vago se 1 espaco com peca
 	
-	Buraco(int x, String y, int espaco){
+	Buraco(int x, Char y, int espaco){
 		this.x=x;
 		this.y=y;
 		this.espaco=espaco;
