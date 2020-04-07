@@ -6,7 +6,7 @@ public class main {
 		System.out.println("Movimentos: " + commands[0] + " -> " + commands[1]);
 		
 		Tabuleiro tabuleiro = new Tabuleiro();
-		tabuleiro.gerarTabuleiro(7);
+		tabuleiro.gerarTabuleiro();
 		tabuleiro.imprimirTabuleiro();
 	}
 }

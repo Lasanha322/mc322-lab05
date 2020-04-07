@@ -11,17 +11,18 @@ public class Campo {
 		this.comida = false;
 	}
 	
-	void inserirPeca() {
+	void colocarPeca() {
 		peca = true;
+		comida = false;
 	}
 	
-	void comerCampo() {
+	void comerPeca() {
 		comida = true;
 	}
 	
 	void mostrarCampo() {
 		if (peca == false) {
-			System.out.print("o ");
+			System.out.print("  ");
 		} else if (comida == false) {
 			System.out.print("P ");
 		} else {
