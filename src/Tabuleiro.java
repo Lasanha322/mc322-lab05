@@ -27,7 +27,42 @@ public class Tabuleiro {
 		//Tiramos a peca do centro
 		campos[3][3].comerPeca();
 	}
+	
+	void aplicarMovimento(String commands) {
+		//Processamos o comando de entrada
+		char[] command = commands.toCharArray();
+		int sourceX, sourceY, targetX, targetY, comidaX, comidaY;
 		
+		sourceX = 7 - (command[1] - '0');
+		targetX = 7 - (command[4] - '0');
+		if (targetX == sourceX)
+			comidaX = targetX;
+		else if (targetX > sourceX)
+			comidaX = (targetX - sourceX)/2 + sourceX;
+		else
+			comidaX = (sourceX - targetX)/2 + targetX;
+		
+		sourceY = command[0] - 'a';
+		targetY = command[3] - 'a';
+
+		if (targetY == sourceY)
+			comidaY = targetY;
+		else if (targetY > sourceY)
+			comidaY = (targetY - sourceY)/2 + sourceY;
+		else
+			comidaY = (sourceY - targetY)/2 + targetY;
+		
+		//Com a posicao de tudo definida, aplicamos as operacoes de comer ou colocar as pecas
+		campos[sourceX][sourceY].comerPeca();
+		campos[targetX][targetY].colocarPeca();
+		campos[comidaX][comidaY].comerPeca();
+		
+		/*Impressoes para debug
+		System.out.println("Tirei de: " + sourceX + sourceY);
+		System.out.println("Coloquei em: " + targetX + targetY);
+		System.out.println("Comi: " + comidaX + comidaY);*/
+	}
+	
 	void imprimirTabuleiro() {
 		//Fazemos um loop para cada linha que sera impressa
 		for (int i = 0; i < n; i++) {

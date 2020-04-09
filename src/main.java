@@ -16,7 +16,7 @@ public class main {
 			//Imprimimos o movimento a ser feito, aplicamos no tabuleiro e o imprimimos
 			System.out.println("Source: " + commands[i].substring(0, 2));
 			System.out.println("Target: " + commands[i].substring(3));
-			//tabuleiro.aplicaMovimento(commands[i]); <- função sob construção
+			tabuleiro.aplicarMovimento(commands[i]);
 			tabuleiro.imprimirTabuleiro();
 		}		
 	}
