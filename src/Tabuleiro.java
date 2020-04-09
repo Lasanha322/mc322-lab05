@@ -27,8 +27,8 @@ public class Tabuleiro {
 		//Tiramos a peca do centro
 		campos[3][3].comerPeca();
 	}
-	
-	void imprimirTabuleiro(){
+		
+	void imprimirTabuleiro() {
 		//Fazemos um loop para cada linha que sera impressa
 		for (int i = 0; i < n; i++) {
 			//Pra cada linha, imprimimos os elementos nas colunas
@@ -40,5 +40,6 @@ public class Tabuleiro {
 		}
 		//Na última linha, imprimimos as letras
 		System.out.println("  a b c d e f g ");
+		System.out.println();
 	}	
 }
