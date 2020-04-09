@@ -1,3 +1,6 @@
+//RA 194966 - Bruna Rodrigues Barbosa
+//RA 195620 - Cauan Newton Alves Souza
+
 public class main {
 	public static void main(String[] args) {
 		//Recebemos, na entrada, a sequencia de movimentos
